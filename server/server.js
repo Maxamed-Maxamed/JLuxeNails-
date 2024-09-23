@@ -10,6 +10,9 @@ const app = express();
 // Middleware
 app.use(cors()); // Enable CORS for cross-origin requests
 app.use(express.json()); // Parse incoming JSON requests
+// Use routes
+app.use('/api/bookings', bookingRoutes);
+app.use('/api/contacts', contactRoutes);
 
 // Define the port to run the server (from environment variable or default to 5000)
 const port = process.env.PORT || 5000;
