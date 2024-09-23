@@ -11,6 +11,8 @@ const app = express();
 app.use(cors()); // Enable CORS for cross-origin requests
 app.use(express.json()); // Parse incoming JSON requests
 // Use routes
+
+
 app.use('/api/bookings', bookingRoutes);
 app.use('/api/contacts', contactRoutes);
 
